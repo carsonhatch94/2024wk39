@@ -25,4 +25,6 @@
 
 # IDE-specific files
 .vs\2024wk39
-*.suo
+.vs/
+obj/
+.obj/
