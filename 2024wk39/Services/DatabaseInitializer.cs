@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using _2024wk39.Data;
 
 
 public class DatabaseInitializer

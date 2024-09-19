@@ -1,4 +1,5 @@
 using _2024wk39.Components;
+using _2024wk39.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

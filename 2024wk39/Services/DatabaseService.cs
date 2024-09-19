@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using _2024wk39.Data;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 public interface IDatabaseService

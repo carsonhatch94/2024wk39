@@ -1,11 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-public class ApplicationDbContext : DbContext
+﻿using _2024wk39.Models;
+using Microsoft.EntityFrameworkCore;
+namespace _2024wk39.Data
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-        : base(options)
+    public class ApplicationDbContext : DbContext
     {
-    }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
 
-    public DbSet<Employee> Employees { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+    }
 }

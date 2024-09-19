@@ -1,7 +1,47 @@
 ﻿@page "/"
+@using _2024wk39.Models
 
-<PageTitle>Home</PageTitle>
+@inject _2024wk39.Data.ApplicationDbContext _context
 
-<h1>Hello, world!</h1>
+<div class="reminder-form">
+    <EditForm Model=@employee OnValidSubmit=@HandleValidSubmit>
+        <DataAnnotationsValidator />
+        <ValidationSummary />
 
-Welcome to your new app.
+        <div class="form-group">
+            <label for="EmailAddress">Email Address</label>
+            <InputText id="EmailAddress" class="form-control" @bind-Value="employee.EmailAddress" />
+        </div>
+
+        <div class="form-group">
+            <label for="Message">Message</label>
+            <InputTextArea id="Message" class="form-control" @bind-Value="employee.Message" />
+        </div>
+
+        <div class="form-group">
+            <label for="DateTime">Date and Time</label>
+            <InputDate id="DateTime" class="form-control" @bind-Value="employee.DateTime" />
+        </div>
+
+        <button class="btn btn-primary" type="submit">Create Reminder</button>
+    </EditForm>
+</div>
+
+@code {
+    private Employee employee = new Employee();
+
+    private async void HandleValidSubmit()
+    {
+        try
+        {
+            _context.Employees.Add(employee);
+            await _context.SaveChangesAsync();
+        }
+        catch
+        {
+            base.StateHasChanged();
+        }
+        employee = new Employee();
+        base.StateHasChanged();
+    }
+}
