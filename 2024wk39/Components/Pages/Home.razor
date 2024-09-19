@@ -1,47 +1,46 @@
 ﻿@page "/"
 @using _2024wk39.Models
-
-@inject _2024wk39.Data.ApplicationDbContext _context
+@using System.ComponentModel.DataAnnotations
 
 <div class="reminder-form">
-    <EditForm Model=@employee OnValidSubmit=@HandleValidSubmit>
+    <EditForm Model="@model" method="post" OnSubmit=@Upload FormName="AddEmployee">
         <DataAnnotationsValidator />
         <ValidationSummary />
 
         <div class="form-group">
             <label for="EmailAddress">Email Address</label>
-            <InputText id="EmailAddress" class="form-control" @bind-Value="employee.EmailAddress" />
+            <InputText id="EmailAddress" class="form-control" @bind-Value="model.EmailAddress" />
         </div>
 
         <div class="form-group">
             <label for="Message">Message</label>
-            <InputTextArea id="Message" class="form-control" @bind-Value="employee.Message" />
+            <InputTextArea id="Message" class="form-control" @bind-Value="model.Message" />
         </div>
 
         <div class="form-group">
             <label for="DateTime">Date and Time</label>
-            <InputDate id="DateTime" class="form-control" @bind-Value="employee.DateTime" />
+            <InputDate id="DateTime" class="form-control" @bind-Value="model!.DateTime" />
         </div>
 
-        <button class="btn btn-primary" type="submit">Create Reminder</button>
+        <button class="btn btn-primary" type="submit">Add Employee</button>
     </EditForm>
 </div>
 
+@inject Data.ApplicationDbContext _context
 @code {
-    private Employee employee = new Employee();
+    [SupplyParameterFromForm(FormName = "AddEmployee")]
+    private Employee model { get; set; } = new();
 
-    private async void HandleValidSubmit()
+    private async Task Upload()
     {
         try
         {
-            _context.Employees.Add(employee);
+            _context.Employees.Add(model);
             await _context.SaveChangesAsync();
         }
         catch
         {
             base.StateHasChanged();
         }
-        employee = new Employee();
-        base.StateHasChanged();
     }
 }

@@ -14,6 +14,8 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<IDatabaseService, DatabaseService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
