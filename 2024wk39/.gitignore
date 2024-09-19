@@ -1,0 +1,28 @@
+﻿# User-specific settings
+.vscode/
+.idea/
+*.rsuser
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.log
+*.cache
+*.bin
+*.obj
+*.dll
+*.exe
+*.so
+*.dylib
+*.a
+*.lib
+*.class
+*.swp
+*.suo
+*.csproj.user
+*.sln.docstates
+
+# IDE-specific files
+.vs\2024wk39
+*.suo
