@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\chatch94\\Repos\\2024wk39\\2024wk39\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\2024wk39.bundle.scp.css",
+      "PackagePath": "staticwebassets\\2024wk39.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\chatch94\\Repos\\2024wk39\\2024wk39\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\chatch94\\Repos\\2024wk39\\2024wk39\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\chatch94\\Repos\\2024wk39\\2024wk39\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\chatch94\\Repos\\2024wk39\\2024wk39\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.2024wk39.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.2024wk39.props",
+      "PackagePath": "build\\2024wk39.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.2024wk39.props",
+      "PackagePath": "buildMultiTargeting\\2024wk39.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.2024wk39.props",
+      "PackagePath": "buildTransitive\\2024wk39.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
