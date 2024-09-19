@@ -1,1 +1,2 @@
-# 2024wk39
+# 24 Hour projects series: 2024-19-09
+Operating on the idea that you will learn more doing 365 projects in a year than you would doing 1 project a year, this sets up a simple form which allows a user to set-up a database and save user forms to it
